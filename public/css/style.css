@@ -1,0 +1,177 @@
+
+/* login & signup page styling  */
+body{
+    margin: 0px;
+}
+.user{
+    background: #523055;
+}
+.left{
+    float: left;
+}
+.right{
+    float: right;
+}
+.clearfix:after{
+    content:'';
+    display: table;
+    clear: both;
+}
+
+
+.textbox{
+    width:99%;
+    height: 28px;
+    border-radius: 5px;
+    border:1px solid grey;
+    text-align: center;
+}
+.button{
+    height: 33px;
+    width: 95%;
+    margin-left:2%;
+    border-radius: 5px;
+    border:1px solid grey;
+    font-size: 16px;
+}
+.signup,
+.login{
+    width: 40%;
+    margin:auto;
+    margin-top: 10%;
+    background: white;
+    padding-bottom:40px;
+    box-shadow: 0px 0px 1px whitesmoke;
+    
+}
+
+.signup h1,
+.login h1{
+    text-align: center;
+    padding: 7px 0;
+    background: #523055;
+    color: white;
+}
+
+.signup .row,
+.login .row{
+    width: 50%;
+    margin: auto;
+    /* border:1px solid; */
+    margin-bottom: 15px;
+}
+.signup p,
+.login p{
+    text-align: center;
+    color: burlywood;
+    font-size: 18px;
+}
+.signup p a,
+.login p a{
+    color: burlywood;
+}
+.btn-login{
+    background: rgba(0, 85, 0,0.8);
+    color: whitesmoke;
+}
+.btn-signup{
+    background: rgba(119,19,156,0.6);
+    color: white;
+}
+
+
+/* products page styling */
+
+.menu{
+    background: slategrey;
+    padding: 10px 0;
+}
+.username{
+    background: white;
+}
+.menu-item{
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.menu-item h3{
+    margin: 0;
+    color: white;
+}
+.menu-item .link{
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+#show-products h1,
+#show-cart h1{
+    text-align: center;
+}
+
+.filter{
+    margin-left: 35%;
+    margin-bottom: 1%;
+}
+
+.shopping-system select{
+    
+    width:150px;
+    height: 25px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.table{
+    width:80%;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.table tr th,
+.table tr td{
+    padding: 10px;
+    border:1px solid;
+    font-size: 18px;
+}
+
+.table tr th{
+    background: blueviolet;
+    color: white;
+}
+.btn-addtocart{
+    border: 1px solid blueviolet;
+    height: 35px;
+    background: blueviolet;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* shopping cart styling */
+
+.btn-quantity {
+    border-radius: 50%;
+    height: 22px;
+    width: 22px;
+    margin: 0 10px;
+    color: whitesmoke;    
+}
+
+.btn-minus{
+    background: firebrick;
+    border: 1px solid firebrick;
+}
+
+.btn-plus{
+    border: 1px solid green;
+    background: green;
+}
+.username p{
+    color: blue;
+    font-weight: bolder;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping Kart - Home</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="user">
+    <div class="container" id="signup">
+        <div class="signup">
+            <h1>User Signup</h1>
+            <!-- <form action="/signup" method="post"> -->
+                <div class="row">
+                    <input type="text" class="textbox" v-model="name" placeholder="Enter Name" required>
+                </div>
+                <div class="row">
+                    <input type="email" class="textbox" v-model="id" placeholder="Enter Email" required>
+                </div>
+                <div class="row">
+                    <input type="password" class="textbox" v-model="password" placeholder="Enter password" required>
+                </div>
+                <div class="row">
+                    <input type="button" class="button btn-signup" value="Signup" v-on:click="signup">
+                </div>
+            <!-- </form> -->
+            <p>for Login <a href="signin.html">click here</a></p>
+        </div>
+    </div>    
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/axios.min.js"></script>
+    <script src="./js/signup.js"></script>
+</body>
+
+</html>

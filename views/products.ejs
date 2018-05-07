@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-Kart - Products Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="container" id="product">
+        <div class="row">
+            <div class="col-sm-12">
+                <!-- menu starts here -->
+                <div class="menu clearfix">
+                    <div class="menu-item">
+                        <h3>Shopping-System</h3>
+                    </div>
+                    <div class="menu-item">
+                        <a class="link" href="/product/productlist">Product</a>
+                    </div>
+                    <div class="menu-item">
+                        <a class="link" href="/product/cart">Cart</a>
+                    </div>
+                    <div class="menu-item right">
+                        <a class="link" href="/logout">Logout</a>
+                    </div>
+
+                </div>
+                <div class="menu username clearfix">
+                    <div class="menu-item right">
+                        <p>Hi
+                            <%= user %>
+                        </p>
+                    </div>
+                </div>
+                <!-- menu ends here -->
+                <div id="show-products" class="shopping-system">
+                    <h1>All Products</h1>
+                    <div class="filter">                        
+                        <span>Filter Products</span>
+                        <select name="" id="vendor" v-model="vendorForFilter" v-on:change="getProductsByVendor()">
+                            <option value="" selected>All Products</option>
+                            <option v-bind:value="vendor.id" v-for="vendor in vendors">{{vendor.name}}</option>
+                        </select>
+                    </div>
+
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Brand Name</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <tr v-for="product in products">
+                            <td>
+                                <span>{{product.name}}</span>
+                            </td>
+                            <td>
+                                <span>&#x20B9;{{product.price}}</span>
+                            </td>
+                            <td>
+                                <span>
+                                    <button class="btn-addtocart" v-bind:id="product.id" v-on:click="addToCart(product.id, product.vendorId)">Buy</button>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                    </table>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="../lib/jquery-1.10.2.min.js"></script>
+    <script src="../lib/bootstrap.min.js"></script>
+    <script src="../lib/vue.js"></script>
+    <script src="../lib/axios.min.js"></script>
+    <script src="../js/showproduct.js"></script>
+</body>
+
+</html>
